@@ -15,9 +15,10 @@ addVlFeat = true;
 root = a ;
 
 addpath(fullfile(root,'toolbox'                         )) ;
-addpath(fullfile(root,'toolbox','txtutil'               )) ;
-addpath(fullfile(root,'toolbox','imageutil'               )) ;
-addpath(fullfile(root,'toolbox','infoutil'               )) ;
+addpath(fullfile(root,'toolbox','utiltext'              )) ;
+addpath(fullfile(root,'toolbox','utilimage'             )) ;
+addpath(fullfile(root,'toolbox','utilclock'             )) ;
+addpath(fullfile(root,'toolbox','slamdata'              )) ;
 addpath(fullfile(root,'toolbox','temporalaggregation'   )) ;
 
 fprintf('s4Matlab ready.\n');
