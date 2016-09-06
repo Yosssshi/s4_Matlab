@@ -10,11 +10,15 @@ function path = s4setup(varargin)
 addVlFeat = true;
 
 % add path
-[a,b,c] = fileparts(mfilename('fullpath')) ;
-[a,b,c] = fileparts(a) ;
+[a,b,c] = fileparts(mfilename('fullpath')) ; % a has path to toolbox
+[a,b,c] = fileparts(a) ; % a has path to s4Matlab
 root = a ;
 
-addpath(fullfile(root,'toolbox'             )) ;
+addpath(fullfile(root,'toolbox'                         )) ;
+addpath(fullfile(root,'toolbox','txtutil'               )) ;
+addpath(fullfile(root,'toolbox','imageutil'               )) ;
+addpath(fullfile(root,'toolbox','infoutil'               )) ;
+addpath(fullfile(root,'toolbox','temporalaggregation'   )) ;
 
 fprintf('s4Matlab ready.\n');
 
@@ -27,7 +31,7 @@ end
 
 % sub function add VLFeat %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 function vlsetup(varagin)
-pathVlFeatRoot = '/local2/yoshi/localscratch/libs/vlfeat-0.9.20';
+pathVlFeatRoot = '/local2/yoshi/1-external-libs/vlfeat-0.9.20';
 
 % option
 noprefix = false ;
